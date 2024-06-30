@@ -1,0 +1,64 @@
+[config]
+backup = true
+banner = true
+create = true
+dotpath = ""
+keepdot = false
+link_dotfile_default = "nolink"
+link_on_import = "nolink"
+longkey = false
+
+[dotfiles.d_hypr]
+src = "config/hypr"
+dst = "~/.config/hypr"
+
+[dotfiles.d_alacritty]
+src = "config/alacritty"
+dst = "~/.config/alacritty"
+
+[dotfiles.d_btop]
+src = "config/btop"
+dst = "~/.config/btop"
+
+[dotfiles.d_fish]
+src = "config/fish"
+dst = "~/.config/fish"
+
+[dotfiles.d_i3]
+src = "config/i3"
+dst = "~/.config/i3"
+
+[dotfiles."f_kvantum.kvconfig"]
+src = "config/Kvantum/kvantum.kvconfig"
+dst = "~/.config/Kvantum/kvantum.kvconfig"
+
+[dotfiles.d_walker]
+src = "config/walker"
+dst = "~/.config/walker"
+
+[dotfiles.d_waybar]
+src = "config/waybar"
+dst = "~/.config/waybar"
+
+[dotfiles.d_spicetify]
+src = "config/spicetify"
+dst = "~/.config/spicetify"
+chmod = "700"
+
+[dotfiles.d_yazi]
+src = "config/yazi"
+dst = "~/.config/yazi"
+
+[profiles.offeex-pc]
+dotfiles = [
+    "d_hypr",
+    "d_alacritty",
+    "d_btop",
+    "d_fish",
+    "d_i3",
+    "f_kvantum.kvconfig",
+    "d_walker",
+    "d_waybar",
+    "d_spicetify",
+    "d_yazi",
+]
