@@ -4,9 +4,9 @@
 
     "height": 36,
 
-    "modules-left": ["tray", "custom/playerctl", "custom/hyprpicker", "custom/randwall", "custom/warp"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["network", "wireplumber", "backlight", "cpu", "memory", "battery", "hyprland/language",  "clock"],
+    "modules-left": ["hyprland/workspaces", "tray", "custom/playerctl", "custom/hyprpicker", "custom/randwall", "custom/warp"],
+    "modules-center": [""],
+    "modules-right": ["bluetooth", "network", "wireplumber", "backlight", "cpu", "memory", "battery", "hyprland/language",  "clock"],
 
     // Modules configuration
 
@@ -17,11 +17,11 @@
       "format-alt": " {:%d/%m}"
 	},
 
-	"hyprland/workspaces": {
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace m+1",
-		"format": "{name}",
-		"on-click": "activate"
+  "hyprland/workspaces": {
+      "on-scroll-up": "hyprctl dispatch workspace -1",
+      "on-scroll-down": "hyprctl dispatch workspace m+1",
+      "format": "{name}",
+	  "on-click": "activate"
   },
 
   /* "custom/playerctl": {
@@ -38,16 +38,16 @@
     }
   }, */
 
-	"battery": {
-    "states": {
-      "warning": 30,
-      "critical": 10
-    },
+  "battery": {
+  "states": {
+    "warning": 30,
+    "critical": 10
+  },
     "tooltip": false,
     "format": "{capacity}% {icon}",
     "format-plugged": "{capacity}% ",
     "format-icons": ["", "", "", "", ""]
-	},
+  },
 
   "memory": {
     "format": "{}% 󰻠",
@@ -58,7 +58,8 @@
   "cpu": {
     "format": "{usage}% 󰍛",
     "format-alt": "{avg_frequency} GHz 󰍛",
-    "interval": 5
+    "interval": 5,
+    "on-click-right": "wezterm -e btop",
   },
 
   "disk": {
@@ -69,32 +70,40 @@
   },
 
   "network": {
-    "format-wifi": "{essid} 󰤨",
-    "format-ethernet": " {ifname}: Aesthetic",
-    "format-linked": " {ifname} (No IP)",
+    "format-wifi": "{essid} 󰤨 {signalStrength}",
+    "format-ethernet": "{ifname}: 🖧",
+    "format-linked": "{ifname} (No IP)",
     "format-disconnected": "󰤭",
     "format-alt": " {ifname}: {ipaddr}/{cidr}",
     "tooltip-format": "{essid}",
-    "on-click-right": "nm-connection-editor"
-	},
+    "on-click-right": "wezterm -e impala"
+  },
 
-	"tray": {
-      "icon-size": 18,
-      "spacing": 8
-	},
+  "bluetooth": {
+  	"format-connected": "{device_alias} ᛒ",
+  	"format-disabled": "",
+  	"format-off": "Off ᛒ",
+  	"format-on": "Idle ᛒ",
+  	"on-click-right": "wezterm -e bluetuith"
+  },
 
-	"backlight": {
-      "format": "{percent}% {icon}",
-      "format-icons": ["", "", "", "", "", "", "", "", ""],
-      "scroll-step": 5
-	},
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  },
 
-	"wireplumber": {
-    "format": "{volume}% {icon}",
-    "format-muted": "󰝟",
-    "format-icons": ["", "", "󰕾"],
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "scroll-step": 5
+  },
+
+  "wireplumber": {
+  "format": "{volume}% {icon}",
+  "format-muted": "󰝟",
+  "format-icons": ["", "", "󰕾"],
     "on-click": "pulsemixer --toggle-mute",
-    "on-click-right": "alacritty -e pulsemixer",
+    "on-click-right": "wezterm -e pulsemixer",
     "scroll-step": 5
   },
 
@@ -111,7 +120,7 @@
     "exec-if": "pgrep 'wf-recorder'",
     "on-click": "exec ./scripts/wlrecord.sh",
     "signal": 8
-	},
+  },
 
   /* "custom/hyprpicker": {
     "format": "󰈋",
@@ -124,10 +133,4 @@
     "on-click": "hyprctl switchxkblayout \"ite-tech.-inc.-ite-device(8910)-keyboard\" next",
     "on-click-right": "hyprctl switchxkblayout \"ite-tech.-inc.-ite-device(8910)-keyboard\" prev"
   },
-
-  "custom/warp": {
-    "format": "WARP",
-    "on-click": "warp-cli connect",
-    "on-click-right": "warp-cli disconnect"
-  }
 }

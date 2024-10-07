@@ -1,0 +1,95 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/home/offeex/dotfiles/wallpapers/negr/sticker.webp",
+    "type": "kitty",
+    "height": 13
+  },
+  "display": {
+    "separator": "➜ "
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "┌────────────────────────────────────────────┐"
+    },
+    // Hardware
+    // {
+    //   "type": "custom",
+    //   "format": "Hardware",
+    //   "outputColor": "green"
+    // },
+    {
+      "type": "title",
+      "format": "╎  {6}{7}{8}"
+    },
+    {
+      "type": "uptime",
+      "key": " ",
+      "format": "╎  {1} days {2} hours {3} mins"
+    },
+    {
+      "type": "custom",
+      "format": "🟇───────────────🟃  𝓗𝓪𝓻𝓭𝔀𝓪𝓻𝓮  🟃───────────────🟇"
+    },
+    {
+      "type": "cpu",
+      "key": "└ 󰻠 CPU     ",
+      "format": "{1}"
+    },
+    {
+      "type": "gpu",
+      "key": "└ 󰍛 GPU     ",
+      "format": "{2}",
+      "hideType": "integrated"
+    },
+    {
+      "type": "physicaldisk",
+      "key": "└ 🖴 Disk    ",
+      "format": "{2}"
+    },
+    {
+      "type": "host",
+      "key": "└ 󰌢 Host    ",
+      "format": "{1}"
+    },
+    // Visual
+    // {
+    //   "type": "custom",
+    //   "format": "Visuals",
+    //   "outputColor": "green"
+    // },
+    {
+      "type": "custom",
+      "format": "🟇───────────────🟃  𝓢𝔂𝓼𝓽𝓮𝓶   🟃────────────────🟇"
+    },
+    {
+      "type": "os",
+      "format": "{3}",
+      "key": "└  OS      "
+    },
+    {
+      "type": "wm",
+      "key": "└ 🗔 WM      ",
+      "format": "{1}"
+    },
+    {
+      "type": "shell",
+      "key": "└  Shell   ",
+      "format": "{1}"
+    },
+    {
+      "type": "terminal",
+      "key": "└  Term    ",
+      "format": "{5}"
+    },
+    {
+      "type": "terminalfont",
+      "key": "└ 🗛 Font    "
+    },
+    {
+      "type": "custom",
+      "format": "└────────────────────────────────────────────┘"
+    }
+  ]
+}

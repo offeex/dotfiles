@@ -1,0 +1,11 @@
+[[manager.prepend_keymap]]
+on  = "<C-x>"
+run = '''
+	shell 'ripdrag -x -i -a -n "$@"' --confirm
+'''
+
+[[manager.prepend_keymap]]
+on  = "y"
+run = [ '''
+	shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list' --confirm
+''', "yank" ]

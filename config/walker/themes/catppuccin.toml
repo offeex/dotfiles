@@ -1,0 +1,52 @@
+[ui]
+[ui.anchors]
+bottom = true
+left = true
+right = true
+top = true
+
+[ui.window]
+h_align = 'fill'
+v_align = 'fill'
+
+[ui.window.box]
+h_align = 'center'
+orientation = 'horizontal'
+spacing = 10.0
+v_align = 'center'
+
+[ui.window.box.margins]
+bottom = 200.0
+top = 200.0
+
+[ui.window.box.scroll]
+overlay_scrolling = false
+
+[ui.window.box.scroll.list]
+always_show = true
+max_height = 300.0
+max_width = 400.0
+min_width = 400.0
+width = 400.0
+
+[ui.window.box.scroll.list.item]
+spacing = 5.0
+
+[ui.window.box.scroll.list.item.activation_label]
+h_align = 'end'
+h_expand = true
+justify = 'right'
+x_align = 1.0
+
+[ui.window.box.scroll.list.item.icon]
+theme = 'Papirus'
+
+[ui.window.box.scroll.list.item.text]
+h_align = 'fill'
+h_expand = true
+revert = true
+
+[ui.window.box.search]
+spacing = 10.0
+v_align = 'start'
+width = 400.0

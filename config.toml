@@ -49,6 +49,35 @@ chmod = "700"
 src = "config/yazi"
 dst = "~/.config/yazi"
 
+[dotfiles.d_fastfetch]
+src = "config/fastfetch"
+dst = "~/.config/fastfetch"
+chmod = "744"
+
+[dotfiles.d_flavours]
+src = "config/flavours"
+dst = "~/.config/flavours"
+
+[dotfiles.d_micro]
+src = "config/micro"
+dst = "~/.config/micro"
+
+[dotfiles.d_vesktop]
+src = "config/vesktop"
+dst = "~/.config/vesktop"
+chmod = "700"
+instignore = ["*", "!settings/", "!themes/"]
+upignore = ["*", "!settings/", "!themes/"]
+cmpignore = ["*", "!settings/", "!themes/"]
+
+[dotfiles.d_wezterm]
+src = "config/wezterm"
+dst = "~/.config/wezterm"
+
+[dotfiles."f_brave-flags.conf"]
+src = "config/brave-flags.conf"
+dst = "~/.config/brave-flags.conf"
+
 [profiles.offeex-pc]
 dotfiles = [
     "d_hypr",
@@ -61,4 +90,10 @@ dotfiles = [
     "d_waybar",
     "d_spicetify",
     "d_yazi",
+    "d_fastfetch",
+    "d_flavours",
+    "d_micro",
+    "d_vesktop",
+    "d_wezterm",
+    "f_brave-flags.conf",
 ]
